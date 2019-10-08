@@ -1,0 +1,380 @@
+---
+title: "Lab 1, Fall 2019"
+author: "Your Friendly GEs!"
+date: "10/8/2019"
+output:
+  pdf_document: default
+  html_document: default
+  markdown: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction: 
+
+Hi everybody, I'm your friendly neighborhood GE and I will be helping you get through 421! 
+  
+We're going to start with a walkthrough of R.
+
+## Lesson 0: Basics
+In general:
+ 
+   - We will be working with what is called a *script*. This is similar to a do file in Stata. It's basically your workspace.
+ - To execute a script, hit cmd+return (control+enter if on PC.) To save the script, cmd+s. There are other shortcuts as well. If you want to run a specific line, then you can move your cursor to that line and hit cmd+return and the R script will only run that one line.
+ - R uses *functions*, which we apply to *objects*. More on this shortly, but if you aren't sure what a function does, or how it works, you can use ? before the function to get the documentation. Ex:
+
+```{r}
+?mean
+```
+
+There are a ton of different types of objects (numeric (numbers), character (letters) and logical (true false statements) are the most common types), and not all functions will work on all objects. Let's talk a bit about objects.
+
+## Lesson 1: All things are objects
+
+An object is an assignment between a name and a value. You assign values to names using `<-` or `=`. The first assignment symbol consists of a `<` next to a dash `-` to make it look like an arrow. 
+
+If we want to make an object name 'a' refer to the number '2', we can do that by:
+
+```{r}
+#assign the value '2' to the name 'a'
+a <- 2
+```
+
+We can do the same thing using the 'equals' sign
+
+```{r}
+a = 2
+a
+```
+
+When I run this code, we see an output that looks like `[1] 2`. The `[1]` 
+refers to the output line. There is only one line here, as we only called one object. The `2` is the value associated with our object. In this case, `a`, which we set equal to 2.
+ 
+You can combine objects together as well which lets us do some basic math operations
+
+If you want to print intermediate steps of your code (ie, see them show up in your terminal) you can put parentheses around your code to get them to display
+
+Let's find the value of `2*3` (equal to two times three), which should be equal to 6. Since a is already equal to 2, we can use that and add it to another variable. Of course, we could simply type `2*3`, but this way let's me show things off.
+
+```{r}
+#assign the value of 3 to the name b
+b <- 3
+#assign the value of b (3) times the value of a (2), to a new name, c (now 6). Remember, parentheses will print out the step.
+(c <- a * b)
+#display c
+(c)
+```
+
+objects however can hold more than one thing inside of them. For instance, we can make vectors. R also has a cool method to create a vector of integers with the colon operator.
+
+```{r}
+#let's create a vector with the integers from 1 through 10.
+tmp <- 1:10
+```
+
+We can also create vectors with the following syntax:
+
+```{r}
+avect <- c(1,4,6,-10,-5.25)
+
+(avect)
+```
+
+we can even apply mathematical operators to vectors. Let's square this vector (this will square all values)
+
+```{r}
+(avect^2)
+```
+
+one caveat though... R has two tendencies/rules to keep in mind. One, vectors have to all be the same 'type' of object, and two, R tries to help a little too much.
+
+Let's make a 'bad' vector: we'll add to our temporary vector a few 'character' values, and one 'Null' value. We will work with this guy later.
+```{r}
+#make a vector that doesn't behave itself
+bad <- c(avect, 11, "red", "dinosaurs", NULL)
+```
+
+before we look into what goes wrong in 'bad' let's learn a bit about functions. We've actually worked with a function already! The 'c' is actually a function. Let's do a quick overview of how functions work in R.
+
+## Lesson 2: Functions
+
+Functions are operations that can transform your created **object** in a ton of different ways. Let's look at some convenient ways to get a snapshot of the data, and summary statistics
+
+ Examples: `head`, `tail`, `mean`, `median`, `sd`, `summary`, `min`, `max`
+
+These functions are good at summarizing data in a variety of ways. Let's see how they work
+
+```{r}
+#print the first few objects in 'tmp'
+head(tmp)
+#print the first 3 objects in 'tmp'
+head(tmp, 3)
+#print the last few objects in 'tmp'
+tail(tmp)
+```
+
+Now let's look at what happened to our 'bad' vector.
+
+```{r}
+#let's print the last 6 objects in 'bad'
+tail(bad,6)
+```
+
+Interesting. Let's circle back to this.
+
+
+We can also use these to perform some basic or commonly used statistics, without the hassle of typing in the formula explicitly.
+
+```{r}
+#mean of our vector tmp
+mean(tmp)
+#median of our vector
+median(tmp)
+#standard deviation of our vector
+sd(tmp)
+```
+
+*IMPORTANT*  We can also print a `summary` of our object. 
+
+```{r}
+#This can work on many object types and is useful to get an overview of the object in general
+summary(tmp)
+```
+
+## Lesson 3: types of Objects
+
+So far, we've mostly worked with numeric objects, which can be integer or numeric. you can detect what sort of object you're working with using the `class()` function.
+
+```{r}
+(class(a))
+(class(tmp))
+(class(avect))
+```
+
+another common class is called `character`
+
+Let's create a character object. These are surrounded by either "" or ''. This distinguishes them from *object names*.
+```{r}
+(some_text <- "calvin go do something you hate, it builds character")
+class(some_text)
+```
+
+with that in mind, let's look at 'bad' again. Remember, it has the numbers 1-10 at first, so we'd expect those values to be stored as integers.
+
+```{r}
+#we can use the 'head' function to look at the first value of our 'bad' vector. Remember, it should be a number
+class(head(bad,1))
+```
+
+huh, it seems like R tried to be helpful and make all of your objects into character values. This is important to keep in mind as you start to work with data.
+
+The last type of object you'll work with frequently is a dataframe. However, to help you get going on the homework, I'm going to do this primarily with your own homework dataset, which requires us to start loading packages.
+
+## Lesson 4: Load Packages & HW help
+
+Base R (what comes installed on your computer) is an incredibly powerful programming language, but one of the best features of R are its packages, which are remotely stored functions written by anybody. You could even write a package if you wanted! This open source nature allows R to be extremely flexible. For now, we will load the `pacman` package management package, and then the `broom` and `tidyverse` packages which gives us access to the `tidy()` command (useful for summarizing regression objects) and a number of useful data manipulation tools.
+
+Let's start by loading packages. Uncomment the install.packages function to get the pacman package to install. If you already have some of these packages, feel free to delete lines. The install.packages function can take a vector of package names, as characters, to install all of the above.
+
+For the most part, we will use the super helpful package 'pacman' to load new packages into our workspace 
+
+```{r eval=FALSE, include=TRUE}
+install.packages(c("pacman"), dependencies=T, repos = "http://cran.us.r-project.org")
+```
+
+Congrats! The pacman package (package management... get it?) will allow us to install, update and load packages in such a way that you won't have to worry about conflicts. Load pacman with the `library()` function.
+
+```{r}
+library(pacman)
+#p_load is pacman's 'library' in that it lets you load packages. and features a number of improvements. Load next two packages.
+p_load(ISLR, tidyverse, broom)
+```
+
+We're also going to use a new function that lets us read CSV data into our workspace. read_csv, which comes from a package we just loaded called 'tidyverse'.
+
+In order to use this function effectively, we should create a name for our dataset. To keep things easy for you, let's call this your_df, but really you could call this anything. In order to load a CSV, you need to find the **filepath** for your dataset. Go to Canvas to download the file, and then find it in your downloads folder. 
+
+If you're on **Mac**, you can find your filepath by right clicking on the file, and then holding control and selecting the 'copy as path' option.
+
+If you're on **PC**, you can find your filepath by right clicking the file, going to 'properties' and copying the filepath from there. Unfortunately, the slashes on PC are also what are known as 'escape characters' in R. What this means for you is either you must replace every "\\" with "\\\\" or with "/".
+
+Turn this filepath into a string by placing quotes around it, and then pass it to the `read_csv()` command.
+
+```{r, include=FALSE}
+filepath <- '/Users/connor/Downloads/ps01_data.csv'
+```
+
+```{r}
+#remember, your filepath needs to be passed to read_csv() as a string, meaning "/Users/You/..." not /Users/You/...
+your_df <-read_csv(filepath)
+```
+
+you'll see that R helpfully tells you what each class is for the variables in your dataset. However, the first thing to do is always to get a good summary- so let's use the summary command
+
+```{r}
+summary(your_df)
+```
+
+
+you'll see that for the numeric columns, you'll be looking at summary statistics, but for character (word) columns you only get the length and the Class/Mode.
+
+we can use our snapshot tools here in the same way we did with vectors to take a peek at this df
+
+```{r}
+head(your_df,14)
+
+tail(your_df, 18)
+```
+
+
+We can also check the size of the dataframe out by using the `dim()` command
+
+```{r}
+dim(your_df)
+```
+
+If we're interested in looking at a specific subset of the data, we can do this in one of two ways. The first is by referencing the column name. Let's look at column 'race'
+
+```{r}
+head(your_df$race,4)
+```
+
+if you're interested in many columns, you can find them by using what's called "indexing". Indexing is passed to a set of square brackets, and is labeled row, column
+
+```{r}
+#let's look at columns 2 & 3
+
+head(your_df[,c(2,3)])
+```
+
+```{r}
+#this creates a mini-dataframe with what you selected. You can also do this for a single column like before:
+
+head(your_df[,3])
+```
+
+If you want to see the names of the columns you were looking at, you can use
+
+```{r}
+names(your_df[,2:6])
+```
+
+To print them out.
+
+you can also select rows with indexing. Let's look at rows 5-10 of columns 2-6
+
+```{r}
+(your_df[5:10,2:6])
+```
+
+or rows 2,7,10 and 12 of those same columns
+
+```{r}
+your_df[c(2,7,10,12),2:6]
+```
+
+We can also use other features of the tidyverse to look at specific portions of our data. Let's use the filter command. The way this works is:
+
+```{r}
+#let's filter on whether or not race is equal to white. In this dataset, that is represented by 'w'
+filter(your_df, race == 'w')
+```
+
+This lets us find things like 'what percentage of white respondents were women"
+
+```{r}
+#the mean of a binary variable is the percentage of times that binary variable is equal to '1'
+(mean(filter(your_df, race == 'w')$i_female))
+```
+
+looks like it's about 76% of the white respondents are women.
+
+we can also do this type of operation in steps using pipes (which come from the tidyverse package), using this funny carrot symbol `%>%`
+
+let's look at the first 8 rows and find out the first names of our respondents using a tidyverse command called `select`
+
+```{r}
+head(your_df) %>% select(first_name)
+```
+
+
+Now let's look and see if there is any gender disparity between our two groups by doing a **z-test**. What do we need to generate a z-score again? We need the n for each of our groups, a mean for each group, and a mean for females in the sample overall.
+
+ - number of black people in sample 
+ 
+we can use the nrow command to count the number of rows in the dataset after you filter by race = 'b'
+
+```{r}
+n_b = filter(your_df, race == "b") %>% nrow()
+```
+
+ - number of white people
+ 
+```{r}
+n_w <- filter(your_df, race == "w") %>% nrow()
+```
+ 
+ - the means
+ 
+```{r}
+#percentage of females who are black
+mean_b <- filter(your_df, race == "b")$i_female %>% mean()
+#percentage of females who are white
+mean_w <- filter(your_df, race == "w")$i_female %>% mean()
+#percentage of females in the sample overall
+mean_all <- your_df$i_female %>% mean()
+```
+
+and we need to put them all together. We're going to be using a few mathematical operators here, primarily, `sqrt()` (square root) and `pnorm()` (distribution function of normal).
+
+pnorm is a weird one, and it takes a quantile (so a z-score), mean, standard deviation, and a few other things. We're interested in a two sided z-test so we'll use lower.tail equal to false.
+
+```{r}
+#use the formula for a z-score to calculate the z-stat
+z_stat <- (mean_b - mean_w) / sqrt(mean_all*(1-mean_all)*(1/n_b + 1/n_w))
+
+#plug it into the probability of seeing a value as large as our z-stat
+2*pnorm(abs(z_stat), lower.tail = FALSE)
+```
+
+
+this doesn't look too bad. There's a difference here but not statistically significant. Let's look at this problem another way.
+
+## Lesson 5: Regression in R
+
+we can also run regressions in R using the 'lm' command. Let's run a regression testing if female is significant by race.
+
+```{r}
+#equations are a NEW object type and are denoted usually by the tilde (~) object
+your_reg <-lm(i_female ~ i_black, data = your_df)
+```
+
+yYou can see here that lm is a function that takes an "equation"" object of the following form:
+
+`y ~ x1 + x2 + x3 +` etc. 
+
+It also needs to be able to reference the dataframe in question, so we need to tell it the name our dataframe has. In this case, `your_df`.
+
+we can pass this to 'tidy', which comes from the broom package, to display the results nicely, we also can use `summary()`
+
+```{r}
+your_reg %>% tidy()
+```
+
+Now for summary:
+```{r}
+summary(your_reg)
+```
+
+let's look at a more complicated equation involving interaction terms. We can call out interaction terms in R by putting a colon between the two interacted variables
+
+```{r}
+your_reg_comp <- lm(i_female ~ i_black + i_callback + i_black:i_military, data = your_df)
+
+summary(your_reg_comp) 
+```
+
+
+PHEW. That's it.  I will see you guys next week! Thank you!
