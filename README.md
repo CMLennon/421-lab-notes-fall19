@@ -25,6 +25,7 @@ Some Useful Resources:
 - Loading your own CSVs into R, dplyr commands (mutate, summarise, filter etc.), qplot
 
 **In Lab Activity 1**: [Getting started for Problem set 1](http://rpubs.com/Clennon/Lab1_fall19)
+- Brief intro to objects, functions, loading your CSVs, loading packages, working with dataframes, and running regressions
 
 An aside:
 
