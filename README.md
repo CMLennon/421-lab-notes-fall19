@@ -18,10 +18,10 @@ Some Useful Resources:
 **Homework 1**
 
 
-**Lab 1**: [Learning R: Introduction link 1](https://github.com/CMLennon/421-Lab-Notes/blob/master/Lab1/Lab-1.md) Alternatively, [link 2](http://rpubs.com/Clennon/Lab1_1)
+**Lab 1**: [Learning R: Introduction link 1](https://github.com/CMLennon/421-lab-notes-fall19/blob/master/Lab1/Lab-1.md) Alternatively, [link 2](http://rpubs.com/Clennon/Lab1_1)
 - Objects, Functions, Mathematical Operators, Dataframes, Regression, Basic Plots
 
-**Lab 1.5**: [Learning R: Enter the Tidyverse](https://github.com/CMLennon/421-Lab-Notes/blob/master/Lab2/Lab_2.md) Alternatively, [link 2](http://rpubs.com/Clennon/Lab2) 
+**Lab 1.5**: [Learning R: Enter the Tidyverse](https://github.com/CMLennon/421-lab-notes-fall19/blob/master/Lab2/Lab_2.md) Alternatively, [link 2](http://rpubs.com/Clennon/Lab2) 
 - Loading your own CSVs into R, dplyr commands (mutate, summarise, filter etc.), qplot
 
 **In Lab Activity 1**: [Getting started for Problem set 1](http://rpubs.com/Clennon/Lab1_fall19)
