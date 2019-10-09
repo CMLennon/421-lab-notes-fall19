@@ -4,7 +4,7 @@ Here is where you can see the lab notes for Luciana Etcheverry's Econometrics (E
 
 Some Useful Resources:
 
-[Getting Started With R](https://www.rstudio.com/online-learning/#r-programming) 
+[Getting Started With R](https://support.rstudio.com/hc/en-us/articles/201141096-Getting-Started-with-R) 
 - A nice collection of resources for those starting out in R.
 
 [Tidyr cheatsheet](https://github.com/rstudio/cheatsheets/blob/master/data-import.pdf) 
