@@ -18,7 +18,7 @@ Some Useful Resources:
 **Homework 1**
 
 
-**Lab 1**: [Learning R: Introduction link 1](https://github.com/CMLennon/421-Lab-Notes/blob/master/Lab1/Lab-1.md) Alternatively, [link 2](http://rpubs.com/Clennon/Lab1)
+**Lab 1**: [Learning R: Introduction link 1](https://github.com/CMLennon/421-Lab-Notes/blob/master/Lab1/Lab-1.md) Alternatively, [link 2](http://rpubs.com/Clennon/Lab1_1)
 - Objects, Functions, Mathematical Operators, Dataframes, Regression, Basic Plots
 
 **Lab 1.5**: [Learning R: Enter the Tidyverse](https://github.com/CMLennon/421-Lab-Notes/blob/master/Lab2/Lab_2.md) Alternatively, [link 2](http://rpubs.com/Clennon/Lab2) 
