@@ -1001,3 +1001,5 @@ And that's it! Welcome to R. Please feel free to play around with the datasets a
 As practice, play around running regressions in the `ISLR` 'College' dataset. Run a regression on your own, and try to look at entire rows or entire columns to familiarize yourself with R.
 
 Good luck, and I'll see you next week.
+
+[Return to main page](https://cmlennon.github.io/421-lab-notes-fall19/)
