@@ -656,3 +656,5 @@ And that's it for today! If you want more practice: try creating your own dummy 
 Try running a regression to see if that large drop in disapproval ratings right at 9/11 is statistically significant (check out what variables are included in the dataset.)
 
 Good luck, and I will see you all next week!
+
+[Return to main page](https://cmlennon.github.io/421-lab-notes-fall19/)
