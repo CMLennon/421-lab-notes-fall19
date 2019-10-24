@@ -27,7 +27,7 @@ Some Useful Resources:
 **In Lab Activity 1**: [Getting started for Problem set 1](http://rpubs.com/Clennon/Lab1_fall19)
 - Brief intro to objects, functions, loading your CSVs, loading packages, working with dataframes, and running regressions
 
-**Honework 2**
+**Homework 2**
 
 **In Lab Activity 2**: [Having fun with ggplot](http://rpubs.com/Clennon/Lab2F19)
 - Review and introduction of tidyverse data cleaning, using tidyverse to create plots, ggplot, getting data from "tidy tuesday"
