@@ -32,6 +32,8 @@ Some Useful Resources:
 **In Lab Activity 2**: [Having fun with ggplot](http://rpubs.com/Clennon/Lab2F19)
 - Review and introduction of tidyverse data cleaning, using tidyverse to create plots, ggplot, getting data from "tidy tuesday"
 
+**In Lab Activity 3**: [Problem set 2 Help](http://rpubs.com/Clennon/L3HW)
+- Review of regression objects, performing GQ, BP and white tests, and heteroskedasticity standard errors.
 An aside:
 
 If you're adventurous, Grant McDermott's data science for economists is an amazing resource. It's designed for PhD students, but not those with any experience with computers. If metrics is your calling, you might enjoy looking at these.
