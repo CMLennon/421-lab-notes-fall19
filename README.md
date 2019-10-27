@@ -6,7 +6,7 @@ For those having difficulty finding their filepath:
 
 Mac: control+click on the file, hold down alt, and then select copy as filepath. That object should be able to go straight into an R read_csv() function. Make sure it's surrounded by either ' ' or " "
 
-Windows: hold shift, right click, copy filepath. Paste this into read_csv()
+Windows: hold shift, right click, copy filepath. Paste this into read_csv(). Flip the direction of the slashes.
 
 Some Useful Resources:
 
