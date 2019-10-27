@@ -2,6 +2,12 @@
 
 Here is where you can see the lab notes for Luciana Etcheverry's Econometrics (EC421) for Fall 2019. I'll periodically update these after class on Tuesdays, and I will generally try to make these serve as a complement rather than a substitute for lab.
 
+For those having difficulty finding their filepath: 
+
+Mac: control+click on the file, hold down alt, and then select copy as filepath. That object should be able to go straight into an R read_csv() function. Make sure it's surrounded by either ' ' or " "
+
+Windows: hold shift, right click, copy filepath. Paste this into read_csv()
+
 Some Useful Resources:
 
 [Getting Started With R](https://support.rstudio.com/hc/en-us/articles/201141096-Getting-Started-with-R) 
