@@ -1,6 +1,6 @@
 # 421-Lab-Notes
 
-Here is where you can see the lab notes for Luciana Etcheverry's Econometrics (EC421) for Fall 2019. I'll periodically update these after class on Tuesdays, and I will generally try to make these serve as a complement rather than a substitute for lab.
+Here is where you can see the lab notes for Luciana Etcheverry's Econometrics (EC421) for Fall 2019. We'll periodically update these after class on Tuesdays, and I will generally try to make these serve as a complement rather than a substitute for lab.
 
 For those having difficulty finding their filepath: 
 
