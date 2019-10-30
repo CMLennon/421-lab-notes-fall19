@@ -42,6 +42,11 @@ Some Useful Resources:
 - Review of regression objects, performing GQ, BP and white tests, and heteroskedasticity standard errors.
 An aside:
 
+**In Lab Activity 4**: [For loops, functions and time series](http://rpubs.com/Clennon/Lab4_F19)
+- For loops, functions, and simulating time series, plus an aside on plotting lines in ggplot.
+
+**Mid-term** **Thursday**, Oct 30th in class.
+
 If you're adventurous, Grant McDermott's data science for economists is an amazing resource. It's designed for PhD students, but not those with any experience with computers. If metrics is your calling, you might enjoy looking at these.
 
 [Grant's Notes](https://github.com/uo-ec607/lectures)
