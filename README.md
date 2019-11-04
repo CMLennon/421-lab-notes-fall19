@@ -49,7 +49,7 @@ An aside:
 
 **Homework 3**
 
-**In-Lab Activity 5** [Running Regrressions with Time Series]
+**In-Lab Activity 5** [Running Regressions with Time Series]
 - Simulating revisted, Learning how to manipulate time series data in R, running regressions in a time-series world and testing for autocorrelation.
 
 If you're adventurous, Grant McDermott's data science for economists is an amazing resource. It's designed for PhD students, but not those with any experience with computers. If metrics is your calling, you might enjoy looking at these.
