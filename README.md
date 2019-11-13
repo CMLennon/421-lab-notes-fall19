@@ -52,6 +52,9 @@ An aside:
 **In-Lab Activity 5** [Running Regressions with Time Series](http://rpubs.com/Clennon/Lab5_F19)
 - Simulating revisted, Learning how to manipulate time series data in R, running regressions in a time-series world and testing for autocorrelation.
 
+**In-Lab Activity 6** [Problem Set 3 Help](http://rpubs.com/Clennon/Lab7f19)
+- Similar to in lab activity 5, but using the data from your current problem set. Read my code carefully before copying - this is not the same as what is required for problemset 3.
+
 If you're adventurous, Grant McDermott's data science for economists is an amazing resource. It's designed for PhD students, but not those with any experience with computers. If metrics is your calling, you might enjoy looking at these.
 
 [Grant's Notes](https://github.com/uo-ec607/lectures)
