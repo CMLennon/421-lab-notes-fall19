@@ -61,6 +61,7 @@ An aside:
 - Do an intuition-driven approach to IV and show some of the tools you'll want to use for the IV portions of your homework (Problem Set 4.)
 
 **In-Lab Activity 8** Homework 4 Answer Help
+- Problem set 4 uses elements not only from activity 7 and your general knowledge, but specifically benefits from a review of [in-lab activity 4](http://rpubs.com/Clennon/Lab4_F19)
 
 If you're adventurous, Grant McDermott's data science for economists is an amazing resource. It's designed for PhD students, but not those with any experience with computers. If metrics is your calling, you might enjoy looking at these.
 
