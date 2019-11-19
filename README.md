@@ -57,8 +57,10 @@ An aside:
 
 **Homework 4**
 
-**In-Lab Activity 7** [Soft Introduction to IV]()
+**In-Lab Activity 7** [Soft Introduction to IV](http://rpubs.com/Clennon/Lab9F19)
 - Do an intuition-driven approach to IV and show some of the tools you'll want to use for the IV portions of your homework (Problem Set 4.)
+
+**In-Lab Activity 8** Homework 4 Answer Help
 
 If you're adventurous, Grant McDermott's data science for economists is an amazing resource. It's designed for PhD students, but not those with any experience with computers. If metrics is your calling, you might enjoy looking at these.
 
